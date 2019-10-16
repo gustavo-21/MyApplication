@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".InsertInfoActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/client_name_et"
+                android:layout_width="250dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="nome"
+                android:padding="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/client_tel_et"
+                android:layout_width="250dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="telefone"
+                android:padding="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/client_name_et" />
+
+            <EditText
+                android:id="@+id/company_name_id"
+                android:layout_width="250dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="nome da empresa"
+                android:padding="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/client_tel_et" />
+
+            <EditText
+                android:id="@+id/company_description"
+                android:layout_width="250dp"
+                android:layout_height="350dp"
+                android:layout_marginTop="40dp"
+                android:padding="15dp"
+                android:gravity="top"
+                android:hint="motivo do contato"
+                android:background="@drawable/edittext_bg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/company_name_id" />
+
+            <LinearLayout
+                android:id="@+id/send_company_btn"
+                android:layout_width="250dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/btn_bg">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ENVIAR" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
